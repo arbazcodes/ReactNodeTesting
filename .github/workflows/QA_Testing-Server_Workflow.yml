@@ -31,8 +31,12 @@ jobs:
         run: npm run build-react
 
       - name: Run tests
-        id: testrun
         run: npm run test-react
+
+      - name: Run Linting
+        run: |
+          npx eslint ./**/.js
+          npx eslint src/**/*.js
 
       - name: On Failure
         if: ${{ failure() }}
