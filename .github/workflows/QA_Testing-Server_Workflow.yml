@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Linting
         run: |
-          npx eslint ./**/.js
+          npx eslint ./**/*.js
           npx eslint src/**/*.js
 
       - name: On Failure
