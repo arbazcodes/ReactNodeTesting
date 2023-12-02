@@ -46,7 +46,7 @@ jobs:
           secure: true
           subject: Failed Deployed Changes on Testing Server
           to: ${{ secrets.TO_EMAIL_ID }}
-          from: ${{ secrets.FROM_EMAIL_IS }}
+          from: ${{ secrets.FROM_EMAIL_ID }}
           body: Testing Server Workflow was unsuccessful in ${{ github.repository }} and changes were NOT deployed to the Testing Server.
 
       - name: On Success
@@ -59,7 +59,7 @@ jobs:
           secure: true
           subject: Successfully Deployed Changes on Testing Server
           to: ${{ secrets.TO_EMAIL_ID }}
-          from: ${{ secrets.FROM_EMAIL_IS }}
+          from: ${{ secrets.FROM_EMAIL_ID }}
           body: Testing Server Workflow was successfully executed in ${{ github.repository }} and changes were deployed to the Testing Server.
 
       - name: Deploy Changes
